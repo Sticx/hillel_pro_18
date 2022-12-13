@@ -1,7 +1,6 @@
 fetch('http://api.openweathermap.org/data/2.5/weather?q=LVIV&units=metric&APPID=5d066958a60d315387d9492393935c19')
 .then(function (resp) {return resp.json()})
 .then(function (data) {
-    console.log(data)
     document.querySelector('.package-name').innerHTML = data.name;
     document.querySelector('.temperature').innerHTML = Math.round(data.main.temp) + '&deg';
     document.querySelector('.pressure').innerHTML = data.main.pressure+' hPa';
